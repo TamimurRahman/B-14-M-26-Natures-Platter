@@ -13,17 +13,25 @@
     />
 
     <title>Natuer's Player</title>
+    <style type="text/tailwindcss">
+      @theme {
+        --breakpoint-tablet: 820px;
+        --breakpoint-md: 830px;
+      }
+    </style>
   </head>
   <body>
     <header class="bg-[#f1ede3]">
-      <nav class="grid grid-cols-3 items-center container mx-auto pt-2">
+      <nav
+        class="grid grid-cols-2 md:grid-cols-3 items-center container mx-auto pt-2"
+      >
         <img src="./assets/nav-logo.png" alt="nav logo" class="w-25 h-12.5" />
-        <ul class="flex gap-8">
+        <ul class="hidden md:flex gap-8">
           <li><a href="">Products</a></li>
           <li><a href="">Services</a></li>
           <li><a href="">Contact Us</a></li>
         </ul>
-        <div class="flex gap-6 items-center">
+        <div class="hidden md:flex gap-6 items-center">
           <i
             class="fa-solid fa-magnifying-glass"
             style="color: rgb(116, 192, 252)"
@@ -39,14 +47,17 @@
             Register
           </button>
         </div>
+        <span class="block md:hidden text-right"
+          ><i class="fa-solid fa-bars"></i
+        ></span>
       </nav>
       <section class="flex flex-col container mx-auto items-center mt-24 gap-8">
-        <div class="max-w-[40%] text-center flex flex-col gap-5">
-          <h2 class="font-bold text-4xl">
+        <div class="max-w-[60%] md:max-w-[50%] text-center flex flex-col gap-5">
+          <h2 class="font-bold text-xl md:text-6xl">
             Freshness <span class="text-green-600">You Can Count</span> On,
             Prices You’ll Love!
           </h2>
-          <p>
+          <p class="md:text-2xl">
             Shop your daily essentials at unbeatable prices. From fresh produce
             to pantry staples, we’ve got you covered every day!
           </p>
@@ -57,8 +68,12 @@
     </header>
     <main>
       <section class="container mx-auto flex flex-col gap-12 mt-36">
-        <h2 class="text-[#179800] font-bold text-[36px]">Services</h2>
-        <div class="grid grid-cols-3 gap-6">
+        <h2
+          class="text-[#179800] font-bold text-[36px] text-center md:text-left"
+        >
+          Services
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div
             class="flex flex-col items-center text-center bg-[#EFEBE3] p-8 gap-4 rounded"
           >
@@ -107,11 +122,15 @@
       <!-- popular product section -->
       <section class="my-20 bg-[#EFEBE3] py-30">
         <div class="container mx-auto space-y-12">
-          <h2 class="text-[#179800] font-bold text-[36px]">Popular Products</h2>
-          <div class="grid grid-cols-12 gap-6">
+          <h2
+            class="text-[#179800] font-bold text-[36px] md:text-left text-center"
+          >
+            Popular Products
+          </h2>
+          <div class="grid md:grid-cols-12 gap-6">
             <!-- 30% left -->
             <div
-              class="col-span-3 bg-linear-to-br from-lime-500 to-lime-200 space-y-5 p-4 pb-0 rounded"
+              class="col-span-12 sm:col-span-12 md:col-span-3 lg:col-span-3 bg-linear-to-br from-lime-500 to-lime-200 space-y-5 p-4 pb-0 rounded"
             >
               <h2 class="font-bold text-2xl text-amber-50">30% off</h2>
               <p>
@@ -125,10 +144,11 @@
               <img src="./assets/Mask group.png" alt="" class="-mt-[150px]" />
             </div>
             <!-- 70% right -->
-            <div class="col-span-9">
-              <div class="grid grid-cols-3 gap-4">
+
+            <div class="col-span-12 md:col-span-9">
+              <div class="grid grid-cols-1 md:col-span-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="bg-white flex gap-6 p-3 rounded">
-                  <img src="./assets/onion.png" alt="" />
+                  <img src="./assets/onion.png" alt="" class="" />
                   <div>
                     <span><i class="fa-regular fa-star"></i> 4.5</span>
                     <h2 class="font-semibold">Onion 1 KG</h2>
